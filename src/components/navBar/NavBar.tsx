@@ -1,35 +1,43 @@
-import { useContext } from "react"
-import { Link, useNavigate} from "react-router-dom"
-import { AuthContext } from "../../contexts/AuthContext"
+import { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext'
+import { ToastAlerta } from '../../utils/ToastAlerta'
 
-function Navbar() { 
+
+function Navbar() {
   let navigate = useNavigate()
 
-  const { handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout } = useContext(AuthContext)
 
-  function logout() {
-      handleLogout()
-      alert('Usuário deslogado com sucesso')
-      navigate('/login')
-  }
+    function logout() {
+        handleLogout()
+        ToastAlerta('Usuário deslogado com sucesso', "info")
+        navigate('/login')
+    }
 
-  return (
-    <>
-     <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
+    let navbarComponent
+
+    if(usuario.token !== "") {
+      navbarComponent = (
+        <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>
-                <Link to="/" className="text-2xl font-bold">Blog Pessoal</Link>
-                </div>
+            <Link to='/home' className='text-2xl font-bold uppercase'>Blog Pessoal</Link>
 
             <div className='flex gap-4'>
               <Link to='/postagens' className='hover:underline'>Postagens</Link>
               <Link to='/temas' className='hover:underline'>Temas</Link>
-              <Link to='/cadastrartemas' className='hover:underline'>Cadastrar Temas</Link>
-              <div className='hover:underline'>Perfil</div>
+              <Link to='/cadastrarTemas' className='hover:underline'>Cadastrar tema</Link>
+              <Link to='/perfil' className='hover:underline'>Perfil</Link>
               <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
             </div>
           </div>
         </div>
+      )
+    }
+
+  return (
+    <>
+      {navbarComponent}
     </>
   )
 }

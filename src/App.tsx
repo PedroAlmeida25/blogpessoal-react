@@ -14,7 +14,9 @@ import Login from './paginas/login/Login';
 import ListaPostagens from './components/postagens/listapostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formulariopostagem/FormularioPostagem';
 import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Perfil from './paginas/perfil/Perfil';
 
 
 axios.get('/user?ID=12345')
@@ -32,6 +34,7 @@ function App() {
   return (
     <>
     <AuthProvider>
+      <ToastContainer/>
       <BrowserRouter>
         <Navbar/>
         <div className="min-h-[80vh]">
@@ -48,6 +51,7 @@ function App() {
             <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
             <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/perfil" element={<Perfil />} />
         </Routes> 
         </div>
         <Footer/>

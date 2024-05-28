@@ -3,6 +3,7 @@ import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
 import { useState, useEffect, ChangeEvent } from 'react'
+import { ToastAlerta } from '../../utils/ToastAlerta'
 
 function Cadastro() {
 
@@ -54,14 +55,14 @@ function Cadastro() {
 
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
-        alert('Usuário cadastrado com sucesso')
+        ToastAlerta('Usuário cadastrado com sucesso', "sucesso")
 
       } catch (error) {
-        alert('Erro ao cadastrar o Usuário')
+        ToastAlerta('Erro ao cadastrar o Usuário', "erro")
       }
 
     } else {
-      alert('Dados inconsistentes. Verifique as informações de cadastro.')
+      ToastAlerta('Dados inconsistentes. Verifique as informações de cadastro.', "erro")
       setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
       setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
     }
