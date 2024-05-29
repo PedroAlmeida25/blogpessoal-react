@@ -17,7 +17,7 @@ function Navbar() {
         
     }
     
-    let component: ReactNode
+    let component: ReactNode;
 
     if (usuario.token !== "") {
 
