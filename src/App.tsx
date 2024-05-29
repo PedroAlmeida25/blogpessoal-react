@@ -1,21 +1,18 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Footer from './components/footer/Footer'
-import Navbar from './components/navbar/Navbar'
-import Home from './paginas/home/Home'
-import Login from './paginas/login/Login'
-import Cadastro from './paginas/cadastro/Cadastro'
-import { AuthProvider } from './contexts/AuthContext'
-import ListaTemas from './components/temas/listatemas/ListaTemas'
-import FormularioTema from './components/temas/formulariotema/FormularioTema'
-import DeletarTema from './components/temas/deletartema/DeletarTema'
-import ListaPostagens from './components/postagens/listapostagens/ListaPostagens'
-import FormularioPostagem from './components/postagens/formulariopostagem/FormularioPostagem'
-import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem'
-import { ToastContainer } from 'react-toastify'
-import Perfil from './paginas/perfil/Perfil'
-
 import 'react-toastify/dist/ReactToastify.css';
+import ListaPostagens from './components/postagens/listapostagens/ListaPostagens'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import Footer from './components/footer/Footer';
+import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem';
+import FormularioPostagem from './components/postagens/formulariopostagem/FormularioPostagem';
+import DeletarTema from './components/temas/deletartema/DeletarTema';
+import FormularioTema from './components/temas/formulariotema/FormularioTema';
+import ListaTemas from './components/temas/listatemas/ListaTemas';
+import { AuthProvider } from './contexts/AuthContext';
+import Cadastro from './paginas/cadastro/Cadastro';
+import Home from './paginas/home/Home';
+import Login from './paginas/login/Login';
+import Perfil from './paginas/perfil/Perfil';
 
 
 function App() {
@@ -25,7 +22,7 @@ function App() {
     <AuthProvider>
       <ToastContainer/>
       <BrowserRouter>
-        <Navbar/>
+        
         <div className="min-h-[80vh]">
         <Routes>
             <Route path="/" element={<Login/>} />
