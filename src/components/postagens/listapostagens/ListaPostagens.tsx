@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
 import { buscar } from '../../../services/Service';
 import CardPostagem from '../cardpostagem/CardPostagem';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
+import { DNA } from 'react-loader-spinner';
 
 
 function ListaPostagens() {
@@ -44,7 +44,7 @@ function ListaPostagens() {
   return (
     <>
       {postagens.length === 0 && (
-        <Dna
+        <DNA
           visible={true}
           height="200"
           width="200"

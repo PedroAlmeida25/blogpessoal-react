@@ -1,4 +1,3 @@
-import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Tema from '../../../models/Tema';
@@ -6,6 +5,7 @@ import { buscar } from '../../../services/Service';
 import CardTemas from '../cardtemas/CardTemas';
 import { useState, useContext, useEffect } from 'react';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
+import { DNA } from 'react-loader-spinner';
 
 
 function ListaTemas() {
@@ -42,7 +42,7 @@ function ListaTemas() {
   return (
     <>
       {temas.length === 0 && (
-        <Dna
+        <DNA
           visible={true}
           height="200"
           width="200"
