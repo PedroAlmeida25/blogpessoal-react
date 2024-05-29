@@ -19,7 +19,7 @@ function Home() {
             </div>
   
             <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
+              <img src='https://ik.imagekit.io/u1yytyqy3/home.png?updatedAt=1717008418954' alt="" className='w-2/3' />
       
             </div>
           </div>
