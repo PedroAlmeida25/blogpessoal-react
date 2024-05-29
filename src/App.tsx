@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import axios from 'axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import DeletarTema from './components/temas/deletartema/DeletarTema';
@@ -16,7 +15,7 @@ import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPosta
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Perfil from './paginas/perfil/Perfil';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   const [] = useState(0)
