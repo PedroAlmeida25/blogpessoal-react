@@ -16,7 +16,7 @@ import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPosta
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Perfil from './paginas/perfil/Perfil';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar/Navbar.tsx';
 
 
 axios.get('/user?ID=12345')
