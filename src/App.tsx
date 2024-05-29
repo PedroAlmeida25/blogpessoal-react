@@ -18,17 +18,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Perfil from './paginas/perfil/Perfil';
 import Navbar from './components/navbar/Navbar';
 
-
-
-axios.get('/user?ID=12345')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-
-
 function App() {
   const [] = useState(0)
 
