@@ -1,20 +1,19 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Footer from './components/footer/Footer';
-import DeletarTema from './components/temas/deletartema/DeletarTema';
-import FormularioTema from './components/temas/formulariotema/FormularioTema';
-import ListaTemas from './components/temas/listatemas/ListaTemas';
-import { AuthProvider } from './contexts/AuthContext';
-import Cadastro from './paginas/cadastro/Cadastro';
-import Home from './paginas/home/Home';
-import Login from './paginas/login/Login';
-import ListaPostagens from './components/postagens/listapostagens/ListaPostagens';
-import FormularioPostagem from './components/postagens/formulariopostagem/FormularioPostagem';
-import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Perfil from './paginas/perfil/Perfil';
-import Navbar from './components/navbar/Navbar'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
+import Footer from "./components/footer/Footer"
+import Navbar from "./components/navbar/Navbar"
+import DeletarPostagem from "./components/postagens/deletarpostagem/DeletarPostagem"
+import FormularioPostagem from "./components/postagens/formulariopostagem/FormularioPostagem"
+import ListaPostagens from "./components/postagens/listapostagens/ListaPostagens"
+import DeletarTema from "./components/temas/deletartema/DeletarTema"
+import FormularioTema from "./components/temas/formulariotema/FormularioTema"
+import ListaTemas from "./components/temas/listatemas/ListaTemas"
+import { AuthProvider } from "./contexts/AuthContext"
+import Cadastro from "./paginas/cadastro/Cadastro"
+import Home from "./paginas/home/Home"
+import Login from "./paginas/login/Login"
+import Perfil from "./paginas/perfil/Perfil"
+
 
 function App() {
 
