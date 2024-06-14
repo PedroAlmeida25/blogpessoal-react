@@ -123,7 +123,7 @@ function FormPostagem() {
                     },
                 })
 
-                ToastAlerta('Postagem cadastrada com sucesso', "erro");
+                ToastAlerta('Postagem cadastrada com sucesso', "sucesso");
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
